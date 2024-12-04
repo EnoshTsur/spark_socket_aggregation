@@ -7,7 +7,7 @@ import csv
 def batch_data():
     with open("data/Global Health Statistics.csv", mode="r") as file:
         reader = csv.DictReader(file)
-        data = list(reader)
+        data = list(reader)[:30]
         return [data[i:i+5] for i in range(0, len(data), 5)]
 
 def create_server():
